@@ -1,0 +1,252 @@
+<div class="banner">
+    <div id="logo">
+        <img id="logo-image" src="/images/logo.gif" alt="">
+    </div>
+    <div id="detail">
+        <h2>CÔNG TY TNHH ẤN LĨNH</h2>
+        <h4>Chuyên cung cấp thiết bị & hệ thống: An Ninh - Chống Sét</h4>
+        <p>Đ/C: 11/59 An Dương Vương, TP. Huế - Vp giao dịch : 8/33 An Dương Vương - Tp Huế</p>
+        <p>Tel: (054) 350 2882- Fax: (054) 384 5840
+        </p>
+    </div>
+</div>
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+        <li>
+            <a href="/">TRANG CHỦ</a>
+        </li>
+        <li>
+            <a href="/about">GIỚI THIỆU</a>
+        </li>
+        <li class="have-sub">
+            <a href="" class="down">SẢN PHẨM
+                <b class="caret" style="float: right;"></b>
+            </a>
+            <ul class=" dropdown-menu down-menu multi-level" role="menu" aria-labelledby="dropdownMenu" id="list-gallery">
+                <li>
+                    <a>
+                        <span>THIẾT BỊ AN NINH</span>
+                        <span class="glyphicon glyphicon-triangle-right" style="float: right; padding-left: 0px;"></span>
+                    </a>
+                    <ul class="submenu-2 sub-menu" id="list-blog">
+                        <li>
+                            <a href="/category?id=000001">CAMERA</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000002">THIẾT BỊ BÁO ĐỘNG</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000003">THIẾT BỊ KIỂM SOÁT RA VÀO</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000004">HỆ THỐNG GHI HÌNH KTS</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown dropdown-submenu">
+                    <a>
+                        <span>THIẾT BỊ PCCC</span>
+                        <span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+                    </a>
+                    <ul class="submenu-2 sub-menu" id="list-blog">
+                        <li>
+                            <a href="/category?id=000005">BÌNH CHỮA CHÁY</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000006">VÒI CHỮA CHÁY</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000007">BÁO CHÁY</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a>
+                        <span>THIẾT BỊ CHỐNG SÉT</span>
+                        <span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+                    </a>
+                    <ul class="submenu-2 sub-menu" id="list-blog">
+                        <li>
+                            <a href="/category?id=000008">KIM THU SÉT</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000009">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000010">TỦ CHỐNG SÉT</a>
+                        </li>
+                        <li>
+                            <a href="/category?id=000011">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/profile">HỒ SƠ CÔNG TY</a>
+        </li>
+        <li>
+            <a href="/contact">LIÊN HỆ</a>
+        </li>
+        <li class="dropdown" style="float: right;">
+            <% if(login) { %>
+                <a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+                    <b>Manage</b>
+                    <span class="caret" style="margin-bottom: 10px;"></span>
+                </a>
+                <ul style="width: 100px !important" class=" dropdown-menu down-menu setting-menu multi-level level " role="menu" aria-labelledby="dropdownMenu"
+                    id="list-gallery">
+                    <li>
+                        <a style="padding-left: 20px;" href="/manageProduct">
+                            <span>Manage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a style="padding-left: 20px;" href="/addProduct">
+                            <span>Add product</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a style="padding-left: 20px;" href="/users/logout">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            <% } %>
+            <% if(!login) { %>
+                <a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+                    <b>LOGIN</b>
+                    <span class="caret" style="margin-bottom: 10px;"></span>
+                </a>
+                <ul id="login-dp" class="dropdown-menu login-menu multi-level">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form" role="form" method="POST" action="/users/login" id="login-nav">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="username">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="pwd">Password</label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="password" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            <% } %>
+        </li>
+    </ul>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/images/slai-an-linh.jpg" style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="/images/slai-an-linh3.jpg" style="width:100%;">
+        </div>
+
+        <div class="item">
+            <img src="/images/slai-an-linh2.jpg" style="width:100%;">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="content">
+    <div class="col-md-3 col-sm-3 col-xs-3 left-bar">
+        <div id="search">
+            <div class="input">
+                <input placeholder="Tìm sản phẩm dịch vụ">
+
+            </div>
+            <div class="search-button">
+                <img style="width: 100%; height: 100%" src="/images/search_buttom.png" alt="">
+            </div>
+        </div>
+        <div id="cate">
+            <div class="main-cate">
+                <p>THIẾT BỊ AN NINH</p>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000001">Camera</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000002">Thiết Bị Báo Động</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000003">Thiết Bị Kiểm Soát Ra Vào</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000004">Hệ Thống Ghi Hình KTS</a>
+            </div>
+        </div>
+        <div id="cate">
+            <div class="main-cate">
+                <p>THIẾT BỊ PCCC</p>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000005">Bình Chữa Cháy</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000006">Vòi Chữa Cháy</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000007">Báo Cháy</a>
+            </div>
+        </div>
+        <div id="cate">
+            <div class="main-cate">
+                <p>THIẾT BỊ CHỐNG SÉT</p>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000008">Kim Thu Sét</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000009">Phụ Kiện Hệ Thống Chống Sét</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000010">Tủ Chống Sét</a>
+            </div>
+            <div class="sub-cate">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                <a href="/category?id=000011">Thiết Bị Chống Sét Lan Truyền</a>
+            </div>
+        </div>
+    </div>

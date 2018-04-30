@@ -1,0 +1,334 @@
+body {
+	background:#468264;
+	background-repeat: repeat;
+	background-position: center top; 
+	background-attachment: fixed;
+}
+.all-background{
+	background: #468264;
+}
+.main-content {
+    width: 990px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.banner {
+	background: url('../images/background.jpg');
+	width: 100%;
+	height: 180px;
+
+}
+#logo {
+	float: left;
+    margin-left: 30px;
+    width: 115px;
+    height: 140px;
+    text-align: center;
+}
+#logo-image{
+	margin-top: 24px;
+    max-width: 115px;
+    max-height: 85px;
+    border-radius: 8px 8px 8px 8px;
+}
+#detail {
+		float: left;
+		margin-left: 10px;
+		height: 180px;
+}
+#detail h2{
+	color: red;
+	font-weight: 650;
+}
+#detail h4 {
+	color: yellow;
+	font-style: italic;
+	font-weight: 600;
+	margin-bottom: 20px;
+
+}
+
+#detail p{
+	font-size: 15px;
+}
+.navbar-collapse{
+	background-color: #468264;
+}
+.navbar-nav{
+    width: 100%;
+}
+.navbar-nav>li {
+	width: 120px;
+}
+.navbar-nav>li>a, .multi-level>li>a, .sub-menu>li>a{
+	color: yellow;
+	font-size: 13px;
+	font-weight: 100;
+}
+.nav>li>a{
+
+    text-align: center;
+}
+.navbar-nav>li>a,.sub-menu>li{
+	padding: 7px 5px;
+}
+.multi-level>li>a{
+
+	padding: 8px 5px;
+}
+.sub-menu li{
+	width: 220px;
+	padding-left: 10px;
+}
+.down .caret{
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.nav>li>a:hover, .multi-level>li>a:hover,.sub-menu>li:hover {
+	background-color: #008686;
+	color: yellow;
+}
+.sub-menu>li:hover  a{
+	text-decoration: none;
+}
+.nav>li:hover .down-menu, .multi-level>li:hover .sub-menu {
+	display: block;
+}
+.dropdown-menu {
+	padding: 0;
+}
+.nav .open>a {
+	background-color: #468264;
+}
+.down-menu {
+	position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-color: #468264;
+}
+
+.login-menu {
+    left: -100px;
+    min-width: 250px;
+}
+.login-menu .row {
+    margin-top: 30px;
+    width: 240px;
+    margin-left: 0px;
+}
+.login-menu .btn-block{
+    background-color: #468264;
+}
+.nav .open>a:hover, .nav .open>a:focus,.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #008686;
+}
+.multi-level>li {
+	position: relative;
+	width: 190px;
+}
+.sub-menu {
+	position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-color: #468264;
+    padding-left: 0px;
+}
+input {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+.content{
+	padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    overflow: hidden;
+
+}
+#search {
+    padding-bottom: 30px;
+}
+#search input {
+    float: left;
+    height: 33px;
+    width: 175px;
+    border: #dddddd;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+    margin-left: 1px;
+}
+.left-bar{
+	padding: 0;
+    padding-right: 30px;
+}
+.search-button {
+    float: left;
+    width: 40px;
+    height: 33px;
+}
+.main-cate{
+    padding-left: 10px;
+    margin-top: 30px;
+    border-bottom: 2px solid gray;
+}
+.main-cate > p{
+    font-weight: 600;
+
+}
+.sub-cate { 
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.sub-cate span, .sub-cate a{
+    color: gray;
+    font-size: 13px;
+}
+.contact {
+    height: auto;
+    margin-top: 20px;
+    border-bottom-color: #CCCCCC;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.contact .contact_img {
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    margin-left: 57px;
+    border: #DDD;
+    border-style: solid;
+    border-width: 1px;
+}
+.contact .contact_name {
+    height: 20px;
+    margin-top: 11px;
+    color: #2194d2;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact .contact_chucvu {
+    min-height: 24px;
+    margin-top: 3px;
+    color: #555;
+    text-align: center;
+    clear: both;
+}
+.contact-img-div {
+    height:89px;
+}
+
+.contact_chucvu a, .contact_chucvu span{
+     color:#2194d2;
+}
+.text p{
+    font-weight: 600;
+}
+
+.share {
+    float: right;
+    width: 206px;
+    padding-top: 0px;
+}
+.share .textshare {
+    float: left;
+    color: #999999;
+    font-size: 12px;
+}
+.right-bar .main-cate {
+    height: 30px;
+    margin-top: 0;
+}
+.right-bar #cate .text{
+    width: 50%;
+    float: left;
+}
+.san-pham {
+    margin-top: 30px;
+}
+.san-pham .div-san-pham {
+    float: left;
+    background: #FFF;
+    width: 125px;
+    height: 168px;
+    margin-right: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+#cate > div {
+    display: block;
+}
+.div-san-pham {
+    position: absolute;
+}
+.san-pham .img-san-pham {
+    width: 125px;
+    height: 120px;
+    border: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.san-pham .ten-san-pham {
+    width: 125px;
+    min-height: 24px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+}
+.cate-product{
+    overflow: hidden;
+}
+footer {
+    margin-top: 30px;
+    border-top: 1px solid #e7e7e7;
+}
+footer > p{
+    text-align: center;
+    margin: 10px auto;
+}

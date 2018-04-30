@@ -1,0 +1,18 @@
+.delete {
+	background-color: red;
+}
+.edit {
+
+	background-color: gray;
+}
+.delete, .edit {
+	width: 55px;
+	height: 28px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	color: white;
+	margin-left: 5px;
+}
+.cate-product {
+	margin-top: 20px;
+}

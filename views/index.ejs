@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CÔNG TY TNHH ẤN LĨNH</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+	<script src="/code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	 crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/stylesheets/menu.css">
+
+</head>
+
+<body>
+	<div class="main-content">
+		<div class="banner">
+			<div id="logo">
+				<img id="logo-image" src="/images/logo.gif" alt="">
+			</div>
+			<div id="detail">
+				<h2>CÔNG TY TNHH ẤN LĨNH</h2>
+				<h4>Chuyên cung cấp thiết bị & hệ thống: An Ninh - Chống Sét</h4>
+				<p>Đ/C: 11/59 An Dương Vương, TP. Huế - Vp giao dịch : 8/33 An Dương Vương - Tp Huế</p>
+				<p>Tel: (054) 350 2882- Fax: (054) 384 5840
+				</p>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="/">TRANG CHỦ</a>
+				</li>
+				<li>
+					<a href="/about">GIỚI THIỆU</a>
+				</li>
+				<li class="have-sub">
+					<a href="" class="down">SẢN PHẨM
+						<b class="caret" style="float: right;"></b>
+					</a>
+					<ul class=" dropdown-menu down-menu multi-level" role="menu" aria-labelledby="dropdownMenu" id="list-gallery">
+						<li>
+							<a>
+								<span>THIẾT BỊ AN NINH</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-left: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li>
+									<a href="/category?id=000001">CAMERA</a>
+								</li>
+								<li>
+									<a href="/category?id=000002">THIẾT BỊ BÁO ĐỘNG</a>
+								</li>
+								<li>
+									<a href="/category?id=000003">THIẾT BỊ KIỂM SOÁT RA VÀO</a>
+								</li>
+								<li>
+									<a href="/category?id=000004">HỆ THỐNG GHI HÌNH KTS</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown dropdown-submenu">
+							<a>
+								<span>THIẾT BỊ PCCC</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li>
+									<a href="/category?id=000005">BÌNH CHỮA CHÁY</a>
+								</li>
+								<li>
+									<a href="/category?id=000006">VÒI CHỮA CHÁY</a>
+								</li>
+								<li>
+									<a href="/category?id=000007">BÁO CHÁY</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<span>THIẾT BỊ CHỐNG SÉT</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li>
+									<a href="/category?id=000008">KIM THU SÉT</a>
+								</li>
+								<li>
+									<a href="/category?id=000009">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</a>
+								</li>
+								<li>
+									<a href="/category?id=000010">TỦ CHỐNG SÉT</a>
+								</li>
+								<li>
+									<a href="/category?id=000011">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/profile">HỒ SƠ CÔNG TY</a>
+				</li>
+				<li>
+					<a href="/contact">LIÊN HỆ</a>
+				</li>
+				<li class="dropdown" style="float: right">
+					<% if(login) { %>
+						<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+							<b>Manage</b>
+							<span class="caret" style="margin-bottom: 10px;"></span>
+						</a>
+						<ul style="width: 100px !important" class=" dropdown-menu down-menu setting-menu multi-level level " role="menu" aria-labelledby="dropdownMenu"
+						 id="list-gallery">
+							<li>
+								<a style="padding-left: 20px;" href="/manageProduct">
+									<span>Manage</span>
+								</a>
+							</li>
+							<li>
+								<a style="padding-left: 20px;" href="/addProduct">
+									<span>Add product</span>
+								</a>
+							</li>
+							<li>
+								<a style="padding-left: 20px;" href="/users/logout">
+									<span>Logout</span>
+								</a>
+							</li>
+						</ul>
+						<% } %>
+							<% if(!login) { %>
+								<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+									<b>LOGIN</b>
+									<span class="caret" style="margin-bottom: 10px;"></span>
+								</a>
+								<ul id="login-dp" class="dropdown-menu login-menu multi-level">
+									<li>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="form" role="form" method="POST" action="/users/login" id="login-nav">
+													<div class="form-group">
+														<label class="sr-only" for="username">Username</label>
+														<input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+													</div>
+													<div class="form-group">
+														<label class="sr-only" for="pwd">Password</label>
+														<input type="password" class="form-control" id="pwd" placeholder="Password" name="password" required>
+
+													</div>
+													<div class="form-group">
+														<button type="submit" class="btn btn-primary btn-block">Login</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<% } %>
+				</li>
+
+			</ul>
+			</li>
+			</ul>
+		</div>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="/images/slai-an-linh.jpg" style="width:100%;">
+				</div>
+
+				<div class="item">
+					<img src="/images/slai-an-linh3.jpg" style="width:100%;">
+				</div>
+
+				<div class="item">
+					<img src="/images/slai-an-linh2.jpg" style="width:100%;">
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<div class="content">
+			<div class="col-md-3 col-sm-3 col-xs-3 left-bar">
+				<div id="search">
+					<div class="input">
+						<input placeholder="Tìm sản phẩm dịch vụ">
+
+					</div>
+					<div class="search-button">
+						<img style="width: 100%; height: 100%" src="/images/search_buttom.png" alt="">
+					</div>
+				</div>
+				<div id="cate">
+					<div class="main-cate">
+						<p>THIẾT BỊ AN NINH</p>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000001">Camera</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000002">Thiết Bị Báo Động</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000003">Thiết Bị Kiểm Soát Ra Vào</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000004">Hệ Thống Ghi Hình KTS</a>
+					</div>
+				</div>
+				<div id="cate">
+					<div class="main-cate">
+						<p>THIẾT BỊ PCCC</p>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000005">Bình Chữa Cháy</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000006">Vòi Chữa Cháy</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000007">Báo Cháy</a>
+					</div>
+				</div>
+				<div id="cate">
+					<div class="main-cate">
+						<p>THIẾT BỊ CHỐNG SÉT</p>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000008">Kim Thu Sét</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000009">Phụ Kiện Hệ Thống Chống Sét</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000010">Tủ Chống Sét</a>
+					</div>
+					<div class="sub-cate">
+						<span class="glyphicon glyphicon-triangle-right"></span>
+						<a href="/category?id=000011">Thiết Bị Chống Sét Lan Truyền</a>
+					</div>
+				</div>
+				<div id="cate">
+					<div class="main-cate">
+						<p>THÔNG TIN LIÊN HỆ</p>
+					</div>
+					<div class="contact">
+						<div class="contact-img-div">
+							<img class="contact_img" src="http://alicohue.com/img_contact/default_contact_photo.gif">
+						</div>
+						<div class="contact_name"></div>
+						<div class="contact_chucvu">
+
+							-
+							<span style="color:#2194d2"></span>
+
+						</div>
+
+						<p style="clear:both"></p>
+					</div>
+					<div class="contact">
+						<div class="contact-img-div">
+							<img class="contact_img" src="http://alicohue.com/img_contact/313/45YG.jpg">
+						</div>
+						<div class="contact_name">Bà Nguyễn Thị Hòa</div>
+						<div class="contact_chucvu">
+							Giám Đốc -
+							<span>(054) 350 2882</span>
+
+						</div>
+
+						<div class="contact_chucvu" style="font-size: 10px">Email:
+							<a href="mailto:alicohue@yahoo.com.vn">alicohue@yahoo.com.vn</a>
+						</div>
+
+						<p style="clear:both"></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 col-xs-9 col-sm-9 right-bar">
+				<div id="cate">
+					<div class="cate-product">
+						<div class="main-cate">
+							<div class="text">
+								<p>THIẾT BỊ AN NINH</p>
+							</div>
+
+							<div class="share">
+								<div class="textshare">Chia sẻ lên: </div>
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_16x16_style" style="float:right; margin-right:18px;">
+									<a class="addthis_button_facebook at300b" style="margin-left:3px" title="Facebook" href="#">
+										<span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152); line-height: 16px; height: 16px; width: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-facebook-1" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="width: 16px; height: 16px;">
+												<title id="at-svg-facebook-1">Facebook</title>
+												<g>
+													<path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z"
+													 fill-rule="evenodd"></path>
+												</g>
+											</svg>
+										</span>
+									</a>
+									<a class="addthis_button_google_plusone_share at300b" style="margin-left:3px" target="_blank" title="Google+" href="#">
+										<span class="at-icon-wrapper" style="background-color: rgb(220, 78, 65); line-height: 16px; height: 16px; width: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-google_plusone_share-2" title="Google+" alt="Google+" class="at-icon at-icon-google_plusone_share"
+											 style="width: 16px; height: 16px;">
+												<title id="at-svg-google_plusone_share-2">Google+</title>
+												<g>
+													<path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z"
+													 fill-rule="evenodd"></path>
+												</g>
+											</svg>
+										</span>
+									</a>
+									<a class="addthis_button_twitter at300b" style="margin-left:3px" title="Twitter" href="#">
+										<span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242); line-height: 16px; height: 16px; width: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-twitter-3" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 16px; height: 16px;">
+												<title id="at-svg-twitter-3">Twitter</title>
+												<g>
+													<path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"
+													 fill-rule="evenodd"></path>
+												</g>
+											</svg>
+										</span>
+									</a>
+									<a class="addthis_button_print at300b" style="margin-left:3px" title="Print" href="#">
+										<span class="at-icon-wrapper" style="background-color: rgb(115, 138, 141); line-height: 16px; height: 16px; width: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-print-4" title="Print" alt="Print" class="at-icon at-icon-print" style="width: 16px; height: 16px;">
+												<title id="at-svg-print-4">Print</title>
+												<g>
+													<path d="M24.67 10.62h-2.86V7.49H10.82v3.12H7.95c-.5 0-.9.4-.9.9v7.66h3.77v1.31L15 24.66h6.81v-5.44h3.77v-7.7c-.01-.5-.41-.9-.91-.9zM11.88 8.56h8.86v2.06h-8.86V8.56zm10.98 9.18h-1.05v-2.1h-1.06v7.96H16.4c-1.58 0-.82-3.74-.82-3.74s-3.65.89-3.69-.78v-3.43h-1.06v2.06H9.77v-3.58h13.09v3.61zm.75-4.91c-.4 0-.72-.32-.72-.72s.32-.72.72-.72c.4 0 .72.32.72.72s-.32.72-.72.72zm-4.12 2.96h-6.1v1.06h6.1v-1.06zm-6.11 3.15h6.1v-1.06h-6.1v1.06z"></path>
+												</g>
+											</svg>
+										</span>
+									</a>
+									<a class="addthis_button_email at300b" style="margin-left:3px" target="_blank" title="Email" href="#">
+										<span class="at-icon-wrapper" style="background-color: rgb(132, 132, 132); line-height: 16px; height: 16px; width: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-email-5" title="Email" alt="Email" class="at-icon at-icon-email" style="width: 16px; height: 16px;">
+												<title id="at-svg-email-5">Email</title>
+												<g>
+													<g fill-rule="evenodd"></g>
+													<path d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path>
+													<path d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path>
+												</g>
+											</svg>
+										</span>
+									</a>
+									<div class="atclear"></div>
+								</div>
+								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+								<!-- AddThis Button END -->
+							</div>
+						</div>
+						<div class="san-pham">
+							<% anProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham">
+										<a href="/detail?id=<%- product._id %>">
+											<img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>">
+										</a>
+									</div>
+									<div class="ten-san-pham">
+										<%- product.name %>
+									</div>
+								</div>
+								<% }) %>
+						</div>
+
+					</div>
+					<div class="cate-product">
+						<div class="main-cate">
+							<div class="text">
+								<p>THIẾT BỊ PCCC</p>
+							</div>
+						</div>
+						<div class="san-pham">
+							<% pcccProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham">
+										<a href="/detail?id=<%- product._id %>">
+											<img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>">
+										</a>
+									</div>
+									<div class="ten-san-pham">
+										<%- product.name %>
+									</div>
+
+								</div>
+								<% }) %>
+						</div>
+
+					</div>
+					<div class="cate-product">
+						<div class="main-cate">
+							<div class="text">
+								<p>THIẾT BỊ CHỐNG SÉT</p>
+							</div>
+						</div>
+						<div class="san-pham">
+							<% csProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham">
+										<a href="/detail?id=<%- product._id %>">
+											<img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>">
+										</a>
+									</div>
+									<div class="ten-san-pham">
+										<%- product.name %>
+									</div>
+
+								</div>
+								<% }) %>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p style="color: #006699; font-size: 18px;">CÔNG TY TNHH ẤN LĨNH</p>
+			<p>
+				<b>Địa chỉ:</b>11/59 An Dương Vương, Thành Phố Huế - Vp giao dịch: 8/33 An Dương Vương - Tp Huế</p>
+			<p>
+				<b>Điện thoại:</b>(054) 3 502 882 - (054) 3 845840 -
+				<b>Fax: </b>(054) 054 3845840</p>
+			<p>
+				<b>Email:</b>
+				<a style="color:#0099CC" href="mailto:alicohue@yahoo.com.vn">alicohue@yahoo.com.vn</a>-
+				<b>Website:</b>
+				<a style="color:#0099CC" target="_blank" href="http://alicohue.com">http://alicohue.com</a>
+			</p>
+		</footer>
+	</div>
+	<style type="text/css">
+		$(document).ready(function() {
+
+			$('.item .delete').click(function() {
+
+				var elem=$(this).closest('.item');
+
+				$.confirm( {
+					'title': 'Delete Confirmation',
+					'message': 'You are about to delete this item. <br />It cannot be restored at a later time! Continue?',
+					'buttons': {
+						'Yes': {
+							'class': 'blue',
+							'action': function() {
+								elem.slideUp();
+							}
+						}
+						,
+						'No': {
+							'class': 'gray',
+							'action': function() {}
+							// Nothing to do in this case. You can as well omit the action property.
+						}
+					}
+				}
+				);
+
+			}
+			);
+
+		}
+
+		);
+	</style>
+</body>
+
+</html>

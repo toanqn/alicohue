@@ -1,0 +1,14 @@
+.item{
+	padding-bottom: 6px;
+	display: inline-block;
+	margin-bottom: 30px;
+	position:relative;
+}
+
+.item .delete{
+	cursor:pointer;
+}
+.edit a{
+	color: white;
+	text-decoration: none;
+}

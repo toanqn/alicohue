@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="//code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/stylesheets/menu.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/edit.css">
+</head>
+<body>
+	<div class="main-content">
+		<div class="banner">	
+			<div id="logo">
+				<img id="logo-image" src="/images/logo.gif" alt="">
+			</div>
+			<div id="detail">
+				<h2>CÔNG TY TNHH ẤN LĨNH</h2>
+				<h4>Chuyên cung cấp thiết bị & hệ thống: An Ninh - Chống Sét</h4>
+				<p>Đ/C: 11/59 An Dương Vương, TP. Huế - Vp giao dịch : 8/33 An Dương Vương - Tp Huế</p>
+				<p>Tel: (054) 350 2882- Fax: (054) 384 5840
+                </p>
+			</div>	
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">TRANG CHỦ</a></li>
+				<li><a href="/about">GIỚI THIỆU</a></li>
+				<li class="have-sub">
+					<a href="" class="down">SẢN PHẨM<b class="caret" style="float: right;"></b></a>
+					<ul class=" dropdown-menu down-menu multi-level" role="menu" aria-labelledby="dropdownMenu" id="list-gallery">
+						<li>
+							<a>
+								<span>THIẾT BỊ AN NINH</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-left: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li><a href="#">CAMERA</a></li>
+								<li><a href="#">THIẾT BỊ BÁO ĐỘNG</a></li>
+								<li><a href="#">THIẾT BỊ KIỂM SOÁT RA VÀO</a></li>
+								<li><a href="">HỆ THỐNG GHI HÌNH KTS</a></li>
+							</ul>
+						</li>
+						<li class="dropdown dropdown-submenu">
+							<a >
+								<span>THIẾT BỊ PCCC</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li><a href="#">BÌNH CHỮA CHÁY</a></li>
+								<li><a href="#">VÒI CHỮA CHÁY</a></li>
+								<li><a href="#">BÁO CHÁY</a></li>
+							</ul>
+						</li>
+						<li >
+							<a >
+								<span>THIẾT BỊ CHỐNG SÉT</span>
+								<span class="glyphicon glyphicon-triangle-right" style="float: right; padding-top: 0px;"></span>
+							</a>
+							<ul class="submenu-2 sub-menu" id="list-blog">
+								<li><a href="#">KIM THU SÉT</a></li>
+								<li><a href="#">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</a></li>
+								<li><a href="#">TỦ CHỐNG SÉT</a></li>
+								<li><a href="">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="/profile">HỒ SƠ CÔNG TY</a></li>
+				<li><a href="/contact">LIÊN HỆ</a></li>
+				<li style="float: right;">
+					<% if(login) { %>
+						<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+							<b>Manage</b>
+							<span class="caret" style="margin-bottom: 10px;"></span>
+						</a>
+						<ul style="width: 100px !important" class=" dropdown-menu down-menu setting-menu multi-level level " role="menu" aria-labelledby="dropdownMenu"
+							id="list-gallery">
+							<li>
+								<a style="padding-left: 20px;" href="/manageProduct">
+									<span>Manage</span>
+								</a>
+							</li>
+							<li>
+								<a style="padding-left: 20px;" href="/addProduct">
+									<span>Add product</span>
+								</a>
+							</li>
+							<li>
+								<a style="padding-left: 20px;" href="/users/logout">
+									<span>Logout</span>
+								</a>
+							</li>
+						</ul>
+					<% } %>
+					<% if(!login) { %>
+						<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+							<b>LOGIN</b>
+							<span class="caret" style="margin-bottom: 10px;"></span>
+						</a>
+						<ul id="login-dp" class="dropdown-menu login-menu multi-level">
+							<li>
+								<div class="row">
+									<div class="col-md-12">
+										<form class="form" role="form" method="POST" action="/users/login" id="login-nav">
+											<div class="form-group">
+												<label class="sr-only" for="username">Username</label>
+												<input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="pwd">Password</label>
+												<input type="password" class="form-control" id="pwd" placeholder="Password" name="password" required>
+		
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-block">Login</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>
+					<% } %>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="contentRight">
+
+            <h1 class="title"> Edit Product</h1>
+            <br> <br>
+            <div class="box box-primary" >
+
+                <!-- form -->
+                <form class="edit-form" role="form" method="POST" action="/users/updateProduct">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" id="" name="productName" placeholder="Title" value="<%- product.name %>" required="required">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Price:</label>
+                            <input type="number" class="form-control" name="price" value="<%- product.price %>" required="required">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" name="categoryId" id="categoryIdList">
+                                <option value="0000001">CAMERA</option>
+                                <option value="0000002">THIẾT BỊ BÁO ĐỘNG</option>
+                                <option value="0000003">THIẾT BỊ KIỂM SOÁT RA VÀO</option>
+                                <option value="0000004">HỆ THỐNG GHI HÌNH KTS</option>
+                                <option value="0000005">BÌNH CHỮA CHÁY</option>
+                                <option value="0000006">VÒI CHỮA CHÁY</option>
+                                <option value="0000007">BÁO CHÁY</option>
+                                <option value="0000008">KIM THU SÉT</option>
+                                <option value="0000009">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</option>
+                                <option value="00000010">TỦ CHỐNG SÉT</option>
+                                <option value="00000011">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</option>
+
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Description</label>
+                            <br>
+                            <textarea class="form-control" name="detail" rows="6" placeholder="Desctiption about this item..." value="<%- product.detail %>" required="required"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Images</label>
+                            <input type="text" id='exampleInputFile1' name='img' required='required' value="<%- product.img %>" style="width: 100%;">
+                        </div>
+                        
+                        <input type="hidden" name="idProduct" value="<%- product._id %>">
+                        
+                    </div>
+                    <!-- /.box-body -->
+                    <br>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-lg btn-primary">Complete Edit</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+		</div>
+		<%- include('partitions/footer.ejs') %>
+	</div>
+</body>
+</html>
