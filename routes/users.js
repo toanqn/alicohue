@@ -42,6 +42,18 @@ router.post('/updateProduct', (req, res) => {
     .catch(err => res.send(err));
 })
 
+router.post('/deleteProduct', (req, res) => {
+  const id = req.body.id;
+  productController.deleteProduct(id)
+    .then((success) => {
+      console.log(`Remove item ${id} from products successfull!`);
+    res.redirect('/manageProduct');
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+});
+
 router.post('/login', passport.authenticate('local'), (req, res) => {
   console.log('Login successfull!');
   res.redirect('/');

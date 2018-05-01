@@ -48,12 +48,39 @@
 									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
 									<div class="ten-san-pham"><%- product.name %></div>
 									<div class="box-footer item">
-										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="delete"> <a href="#delete-<%-product._id%>" data-toggle="modal">Delete</a></button>
 										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
 									</div>		
 								</div>
 							<% }) %>
 						</div>
+						<% anProducts.forEach((product) => { %>
+							<div class="modal fade" id="delete-<%-product._id%>">
+								<form role="form" method="POST" action="/users/deleteProduct">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4>Delete
+													<%- product.name %>
+												</h4>
+											</div>
+											<div class="modal-body">
+												<p>This action cannot redo. Are you sure delete item:
+													<b>
+														<%- product.name %>
+													</b>?</p>
+											</div>
+											<input type="hidden" name="id" value="<%- product._id %>">
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+								</form>
+
+							</div>
+						 <% }) %>
 						
 					</div>
 					<div class="cate-product">
@@ -68,12 +95,39 @@
 									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
 									<div class="ten-san-pham"><%- product.name %></div>
 									<div class="box-footer item">
-										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="delete" > <a href="#delete-<%-product._id%>" data-toggle="modal">Delete</a></button>
 										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
 									</div>		
 								</div>
 							<% }) %>
 						</div>
+						<% pcccProducts.forEach((product) => { %>
+							<div class="modal fade" id="delete-<%-product._id%>">
+								<form role="form" method="POST" action="/users/deleteProduct">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4>Delete
+													<%- product.name %>
+												</h4>
+											</div>
+											<div class="modal-body">
+												<p>This action cannot redo. Are you sure delete item:
+													<b>
+														<%- product.name %>
+													</b>?</p>
+											</div>
+											<input type="hidden" name="id" value="<%- product._id %>">
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+								</form>
+
+							</div>
+						 <% }) %>
 						
 					</div>
 					<div class="cate-product">
@@ -88,12 +142,39 @@
 									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
 									<div class="ten-san-pham"><%- product.name %></div>
 									<div class="box-footer item">
-										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="delete"> <a href="#delete-<%-product._id%>" data-toggle="modal">Delete</a></button>
 										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
 									</div>		
 								</div>
 							<% }) %>
 						</div>
+						<% csProducts.forEach((product) => { %>
+							<div class="modal fade" id="delete-<%-product._id%>">
+								<form role="form" method="POST" action="/users/deleteProduct">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4>Delete
+													<%- product.name %>
+												</h4>
+											</div>
+											<div class="modal-body">
+												<p>This action cannot redo. Are you sure delete item:
+													<b>
+														<%- product.name %>
+													</b>?</p>
+											</div>
+											<input type="hidden" name="id" value="<%- product._id %>">
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="submit" class="btn btn-danger">Delete</button>
+											</div>
+										</div>
+									</div>
+								</form>
+
+							</div>
+						 <% }) %>
 						
 					</div>
 				</div>
@@ -106,35 +187,5 @@
 			<p>	<b>Email:</b><a style="color:#0099CC" href="mailto:alicohue@yahoo.com.vn">alicohue@yahoo.com.vn</a>-<b>Website:</b><a style="color:#0099CC" target="_blank" href="http://alicohue.com">http://alicohue.com</a></p>
 		</footer>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-	<script src="jquery.confirm/jquery.confirm.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		
-		$('.item .delete').click(function(){
-			
-			var elem = $(this).closest('.item');
-			
-			$.confirm({
-				'title'		: 'Delete Confirmation',
-				'message'	: 'You are about to delete this item. <br />It cannot be restored at a later time! Continue?',
-				'buttons'	: {
-					'Yes'	: {
-						'class'	: 'blue',
-						'action': function(){
-							elem.slideUp();
-						}
-					},
-					'No'	: {
-						'class'	: 'gray',
-						'action': function(){}	// Nothing to do in this case. You can as well omit the action property.
-					}
-				}
-			});
-			
-		});
-		
-	});
-	</script>
 </body>
 </html>
