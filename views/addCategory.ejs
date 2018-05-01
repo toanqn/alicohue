@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="/code.jquery.com/jquery.js"></script>
+    <!-- <script src="/code.jquery.com/jquery.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/menu.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/edit.css">
@@ -77,31 +77,31 @@
                 <li style="float: right;">
                     <% if(login) { %>
                         <a href="#" class="dropdown-toggle down" data-toggle="dropdown">
-                            <b>Manage</b>
+                            <b>Quản lý</b>
                             <span class="caret" style="margin-bottom: 10px;"></span>
                         </a>
                         <ul style="width: 100px !important" class=" dropdown-menu down-menu setting-menu multi-level level " role="menu" aria-labelledby="dropdownMenu"
                             id="list-gallery">
                             <li>
                                 <a style="padding-left: 20px;" href="/manageProduct">
-                                    <span>Manage</span>
+                                    <span>Quản lý</span>
                                 </a>
                             </li>
                             <li>
                                 <a style="padding-left: 20px;" href="/addProduct">
-                                    <span>Add product</span>
+                                    <span>Thêm sản phẩm</span>
                                 </a>
                             </li>
                             <li>
                                 <a style="padding-left: 20px;" href="/users/logout">
-                                    <span>Logout</span>
+                                    <span>Đăng xuất</span>
                                 </a>
                             </li>
                         </ul>
                     <% } %>
                     <% if(!login) { %>
                         <a href="#" class="dropdown-toggle down" data-toggle="dropdown">
-                            <b>LOGIN</b>
+                            <b>Đăng nhập</b>
                             <span class="caret" style="margin-bottom: 10px;"></span>
                         </a>
                         <ul id="login-dp" class="dropdown-menu login-menu multi-level">
