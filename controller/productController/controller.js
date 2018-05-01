@@ -27,7 +27,7 @@ const showByCate = function (cateId) {
 };
 
 const getProductByName = function (text) {
-  return product.find({ 'name': { $regex: `.*${text}*.` } });   // eslint-disable-line
+  return product.find({ 'name': {$regex:  new RegExp(text, "i")}});   // eslint-disable-line
 };
 
 module.exports = {

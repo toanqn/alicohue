@@ -52,16 +52,16 @@
 							</a>
 							<ul class="submenu-2 sub-menu" id="list-blog">
 								<li>
-									<a href="#">CAMERA</a>
+									<a href="/category?id=000001">CAMERA</a>
 								</li>
 								<li>
-									<a href="#">THIẾT BỊ BÁO ĐỘNG</a>
+									<a href="/category?id=000002">THIẾT BỊ BÁO ĐỘNG</a>
 								</li>
 								<li>
-									<a href="#">THIẾT BỊ KIỂM SOÁT RA VÀO</a>
+									<a href="/category?id=000003">THIẾT BỊ KIỂM SOÁT RA VÀO</a>
 								</li>
 								<li>
-									<a href="">HỆ THỐNG GHI HÌNH KTS</a>
+									<a href="/category?id=000004">HỆ THỐNG GHI HÌNH KTS</a>
 								</li>
 							</ul>
 						</li>
@@ -72,13 +72,13 @@
 							</a>
 							<ul class="submenu-2 sub-menu" id="list-blog">
 								<li>
-									<a href="#">BÌNH CHỮA CHÁY</a>
+									<a href="/category?id=000005">BÌNH CHỮA CHÁY</a>
 								</li>
 								<li>
-									<a href="#">VÒI CHỮA CHÁY</a>
+									<a href="/category?id=000006">VÒI CHỮA CHÁY</a>
 								</li>
 								<li>
-									<a href="#">BÁO CHÁY</a>
+									<a href="/category?id=000007">BÁO CHÁY</a>
 								</li>
 							</ul>
 						</li>
@@ -89,16 +89,16 @@
 							</a>
 							<ul class="submenu-2 sub-menu" id="list-blog">
 								<li>
-									<a href="#">KIM THU SÉT</a>
+									<a href="/category?id=000008">KIM THU SÉT</a>
 								</li>
 								<li>
-									<a href="#">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</a>
+									<a href="/category?id=000009">PHỤ KIỆN HỆ THÓNG CHỐNG SÉT</a>
 								</li>
 								<li>
-									<a href="#">TỦ CHỐNG SÉT</a>
+									<a href="/category?id=000010">TỦ CHỐNG SÉT</a>
 								</li>
 								<li>
-									<a href="">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</a>
+									<a href="/category?id=000011">THIẾT BỊ CHỐNG SÉT LAN TRUYỀN</a>
 								</li>
 							</ul>
 						</li>
@@ -134,35 +134,35 @@
 								</a>
 							</li>
 						</ul>
-					<% } %>
-					<% if(!login) { %>
-						<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
-							<b>LOGIN</b>
-							<span class="caret" style="margin-bottom: 10px;"></span>
-						</a>
-						<ul id="login-dp" class="dropdown-menu login-menu multi-level">
-							<li>
-								<div class="row">
-									<div class="col-md-12">
-										<form class="form" role="form" method="POST" action="/users/login" id="login-nav">
-											<div class="form-group">
-												<label class="sr-only" for="username">Username</label>
-												<input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
-											</div>
-											<div class="form-group">
-												<label class="sr-only" for="pwd">Password</label>
-												<input type="password" class="form-control" id="pwd" placeholder="Password" name="password" required>
+						<% } %>
+							<% if(!login) { %>
+								<a href="#" class="dropdown-toggle down" data-toggle="dropdown">
+									<b>LOGIN</b>
+									<span class="caret" style="margin-bottom: 10px;"></span>
+								</a>
+								<ul id="login-dp" class="dropdown-menu login-menu multi-level">
+									<li>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="form" role="form" method="POST" action="/users/login" id="login-nav">
+													<div class="form-group">
+														<label class="sr-only" for="username">Username</label>
+														<input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
+													</div>
+													<div class="form-group">
+														<label class="sr-only" for="pwd">Password</label>
+														<input type="password" class="form-control" id="pwd" placeholder="Password" name="password" required>
 
+													</div>
+													<div class="form-group">
+														<button type="submit" class="btn btn-primary btn-block">Login</button>
+													</div>
+												</form>
 											</div>
-											<div class="form-group">
-												<button type="submit" class="btn btn-primary btn-block">Login</button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</li>
-						</ul>
-					<% } %>
+										</div>
+									</li>
+								</ul>
+								<% } %>
 				</li>
 
 			</ul>
@@ -207,10 +207,10 @@
 			<div class="col-md-3 col-sm-3 col-xs-3 left-bar">
 				<div id="search">
 					<div class="input">
-						<input placeholder="Tìm sản phẩm dịch vụ">
+						<input placeholder="Tìm sản phẩm dịch vụ" id="searchText">
 
 					</div>
-					<div class="search-button">
+					<div class="search-button" onclick="return searchText()">
 						<img style="width: 100%; height: 100%" src="/images/search_buttom.png" alt="">
 					</div>
 				</div>
@@ -220,61 +220,57 @@
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Camera</a>
+						<a href="/category?id=000001">Camera</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Báo Động</a>
+						<a href="/category?id=000002">Thiết Bị Báo Động</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Kiểm Soát Ra Vào</a>
+						<a href="/category?id=000003">Thiết Bị Kiểm Soát Ra Vào</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Hệ Thống Ghi Hình KTS</a>
+						<a href="/category?id=000004">Hệ Thống Ghi Hình KTS</a>
 					</div>
 				</div>
 				<div id="cate">
 					<div class="main-cate">
-						<p>THIẾT BỊ AN NINH</p>
+						<p>THIẾT BỊ PCCC</p>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Camera</a>
+						<a href="/category?id=000005">Bình Chữa Cháy</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Báo Động</a>
+						<a href="/category?id=000006">Vòi Chữa Cháy</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Kiểm Soát Ra Vào</a>
-					</div>
-					<div class="sub-cate">
-						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Hệ Thống Ghi Hình KTS</a>
+						<a href="/category?id=000007">Báo Cháy</a>
 					</div>
 				</div>
 				<div id="cate">
 					<div class="main-cate">
-						<p>THIẾT BỊ AN NINH</p>
+						<p>THIẾT BỊ CHỐNG SÉT</p>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Camera</a>
+						<a href="/category?id=000008">Kim Thu Sét</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Báo Động</a>
+						<a href="/category?id=000009">Phụ Kiện Hệ Thống Chống Sét</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Thiết Bị Kiểm Soát Ra Vào</a>
+						<a href="/category?id=000010">Tủ Chống Sét</a>
 					</div>
 					<div class="sub-cate">
 						<span class="glyphicon glyphicon-triangle-right"></span>
-						<a>Hệ Thống Ghi Hình KTS</a>
+						<a href="/category?id=000011">Thiết Bị Chống Sét Lan Truyền</a>
 					</div>
 				</div>
 				<div id="cate">
@@ -319,7 +315,9 @@
 					<div class="cate-product">
 						<div class="main-cate">
 							<div class="text">
-								<p><%- category %></p>
+								<p>
+									<%- category.name %>
+								</p>
 							</div>
 
 							<div class="share">
@@ -328,9 +326,8 @@
 								<div class="addthis_toolbox addthis_default_style addthis_16x16_style" style="float:right; margin-right:18px;">
 									<a class="addthis_button_facebook at300b" style="margin-left:3px" title="Facebook" href="#">
 										<span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152); line-height: 16px; height: 16px; width: 16px;">
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"
-											 role="img" aria-labelledby="at-svg-facebook-1" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook"
-											 style="width: 16px; height: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-facebook-1" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="width: 16px; height: 16px;">
 												<title id="at-svg-facebook-1">Facebook</title>
 												<g>
 													<path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z"
@@ -341,8 +338,8 @@
 									</a>
 									<a class="addthis_button_google_plusone_share at300b" style="margin-left:3px" target="_blank" title="Google+" href="#">
 										<span class="at-icon-wrapper" style="background-color: rgb(220, 78, 65); line-height: 16px; height: 16px; width: 16px;">
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"
-											 role="img" aria-labelledby="at-svg-google_plusone_share-2" title="Google+" alt="Google+" class="at-icon at-icon-google_plusone_share"
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-google_plusone_share-2" title="Google+" alt="Google+" class="at-icon at-icon-google_plusone_share"
 											 style="width: 16px; height: 16px;">
 												<title id="at-svg-google_plusone_share-2">Google+</title>
 												<g>
@@ -354,8 +351,8 @@
 									</a>
 									<a class="addthis_button_twitter at300b" style="margin-left:3px" title="Twitter" href="#">
 										<span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242); line-height: 16px; height: 16px; width: 16px;">
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"
-											 role="img" aria-labelledby="at-svg-twitter-3" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 16px; height: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-twitter-3" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 16px; height: 16px;">
 												<title id="at-svg-twitter-3">Twitter</title>
 												<g>
 													<path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"
@@ -366,8 +363,8 @@
 									</a>
 									<a class="addthis_button_print at300b" style="margin-left:3px" title="Print" href="#">
 										<span class="at-icon-wrapper" style="background-color: rgb(115, 138, 141); line-height: 16px; height: 16px; width: 16px;">
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"
-											 role="img" aria-labelledby="at-svg-print-4" title="Print" alt="Print" class="at-icon at-icon-print" style="width: 16px; height: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-print-4" title="Print" alt="Print" class="at-icon at-icon-print" style="width: 16px; height: 16px;">
 												<title id="at-svg-print-4">Print</title>
 												<g>
 													<path d="M24.67 10.62h-2.86V7.49H10.82v3.12H7.95c-.5 0-.9.4-.9.9v7.66h3.77v1.31L15 24.66h6.81v-5.44h3.77v-7.7c-.01-.5-.41-.9-.91-.9zM11.88 8.56h8.86v2.06h-8.86V8.56zm10.98 9.18h-1.05v-2.1h-1.06v7.96H16.4c-1.58 0-.82-3.74-.82-3.74s-3.65.89-3.69-.78v-3.43h-1.06v2.06H9.77v-3.58h13.09v3.61zm.75-4.91c-.4 0-.72-.32-.72-.72s.32-.72.72-.72c.4 0 .72.32.72.72s-.32.72-.72.72zm-4.12 2.96h-6.1v1.06h6.1v-1.06zm-6.11 3.15h6.1v-1.06h-6.1v1.06z"></path>
@@ -377,8 +374,8 @@
 									</a>
 									<a class="addthis_button_email at300b" style="margin-left:3px" target="_blank" title="Email" href="#">
 										<span class="at-icon-wrapper" style="background-color: rgb(132, 132, 132); line-height: 16px; height: 16px; width: 16px;">
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1"
-											 role="img" aria-labelledby="at-svg-email-5" title="Email" alt="Email" class="at-icon at-icon-email" style="width: 16px; height: 16px;">
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img"
+											 aria-labelledby="at-svg-email-5" title="Email" alt="Email" class="at-icon at-icon-email" style="width: 16px; height: 16px;">
 												<title id="at-svg-email-5">Email</title>
 												<g>
 													<g fill-rule="evenodd"></g>
@@ -402,9 +399,11 @@
 											<img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>">
 										</a>
 									</div>
-									<div class="ten-san-pham"><%- product.name %></div>
+									<div class="ten-san-pham">
+										<%- product.name %>
+									</div>
 								</div>
-							<% }) %>
+								<% }) %>
 						</div>
 					</div>
 				</div>
@@ -459,6 +458,13 @@
 
 		);
 	</style>
+	<script>
+		var searchText = function() {
+			var text = document.getElementById('searchText').value;
+			window.location.href = `/search?query=${text}`;
+			return false;
+		}
+	</script>
 </body>
 
 </html>

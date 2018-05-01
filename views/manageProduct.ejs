@@ -43,14 +43,16 @@
 			                </div>
 						</div>
 						<div class="san-pham">
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit"> <a href="edit_product.html" >Edit</a></button>
-	                    		</div>		
-				            </div>
+							<% anProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
+									<div class="ten-san-pham"><%- product.name %></div>
+									<div class="box-footer item">
+										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
+									</div>		
+								</div>
+							<% }) %>
 						</div>
 						
 					</div>
@@ -61,46 +63,16 @@
 							</div>
 						</div>
 						<div class="san-pham">
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class="delete">Delete</button>
-	                        		<button type="submit" class="edit"> <a href="/editProduct?id=''" > Edit</a></button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class="delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class="delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class="delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
+							<% pcccProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
+									<div class="ten-san-pham"><%- product.name %></div>
+									<div class="box-footer item">
+										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
+									</div>		
+								</div>
+							<% }) %>
 						</div>
 						
 					</div>
@@ -111,46 +83,16 @@
 							</div>
 						</div>
 						<div class="san-pham">
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class="delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
-							<div class="div-san-pham">
-				           		<div class="img-san-pham"><a href="/images/prc-334zf.jpg"><img style="max-width:110px; max-height:110px" alt="PRC 334ZF" title="PRC 334ZF" src="http://alicohue.com/img_products/313/145ec.jpg"></a></div>
-					            <div class="ten-san-pham">PRC 334ZF</div>
-								<div class="box-footer item">
-	                        		<button type="submit" class=" delete">Delete</button>
-	                        		<button type="submit" class="edit">Edit</button>
-	                    		</div>		
-				            </div>
+							<% csProducts.forEach((product) => { %>
+								<div class="div-san-pham">
+									<div class="img-san-pham"><a href="/detail?id=<%- product._id %>"><img style="max-width:110px; max-height:110px" alt="<%- product.name %>" title="<%- product.name %>" src="<%- product.img %>"></a></div>
+									<div class="ten-san-pham"><%- product.name %></div>
+									<div class="box-footer item">
+										<button type="submit" class=" delete">Delete</button>
+										<button type="submit" class="edit"> <a href="/editProduct?id=<%- product._id %>" >Edit</a></button>
+									</div>		
+								</div>
+							<% }) %>
 						</div>
 						
 					</div>

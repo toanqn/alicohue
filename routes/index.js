@@ -10,15 +10,14 @@ const isAuthenticated = require('../utility/isAuthenticated');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  let anProducts = [];
-  let pcccProduts = []
-  let csProducts = [];
-
   productController.showAll()
   .then((products) => {
-    anProducts = products.filter(product => ['000001', '000002', '000003', '000004'].includes(product.category));
-    pcccProducts = products.filter(product => ['000005', '000006', '000007'].includes(product.category));
-    csProducts = products.filter(product => ['000008', '000009', '000010', '000011'].includes(product.category));
+    let anProducts = products.filter(product => ['000001', '000002', '000003', '000004'].includes(product.category));
+    let pcccProducts = products.filter(product => ['000005', '000006', '000007'].includes(product.category));
+    let csProducts = products.filter(product => ['000008', '000009', '000010', '000011'].includes(product.category));
+    anProducts.length = Math.min(anProducts.length, 15);
+    pcccProducts.length = Math.min(pcccProducts.length, 15);
+    csProducts.length = Math.min(csProducts.length, 15);
     res.render('index', { 
       login: req.isAuthenticated(),
       title: 'Alicohue',
@@ -61,8 +60,8 @@ router.get('/addProduct', isAuthenticated, (req, res) => {
 });
 
 router.get('/editProduct', isAuthenticated, (req, res) => {
-  const { idProduct } = req.query;
-  productController.show(idProduct)
+  const { id } = req.query;
+  productController.show(id)
     .then((product) => {
       res.render('editProduct', { 
         login: req.isAuthenticated(),
@@ -111,9 +110,9 @@ router.get('/detail', (req, res) => {
 
 router.get('/category', (req, res) => {
   const { id } = req.query;
-  Promise.all(productController.showByCate(id), categoryController.getCateById(id)) 
+  Promise.all([productController.showByCate(id), categoryController.getCateById(id)]) 
     .then(([products, category]) => {
-      res.render('detail', {
+      res.render('category', {
         login: req.isAuthenticated(),
         category,
         products
@@ -122,6 +121,31 @@ router.get('/category', (req, res) => {
     .catch((err) => {
       res.send(err);
     });
+});
+
+router.get('/search', (req, res) => {
+  const { query } = req.query;
+  productController.getProductByName(query)
+    .then((products) => {
+      console.log(query);
+      console.log(products);
+      res.render('category', {
+        login: req.isAuthenticated(),
+        products,
+        category: {name: 'Kết quả'}
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+//for add category
+router.get('/addCategory', (req, res) => {
+  res.render('addCategory', { 
+    login: req.isAuthenticated(),
+    title: 'Alicohue' 
+  });
 });
 
 module.exports = router;

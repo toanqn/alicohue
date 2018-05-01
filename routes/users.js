@@ -6,7 +6,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const productController = require('../controller/productController/controller');
 const adminController = require('../controller/adminController/controller');
-
+const categoryController = require('../controller/categoryController/controller');
 const isAuthenticated = require('../utility/isAuthenticated');
 
 /* GET users listing. */
@@ -24,12 +24,12 @@ router.post('/saveProduct',  (req, res) => {
     }).catch(err => res.send(err));
 });
 
-router.post('updateProduct', (req, res) => {
+router.post('/updateProduct', (req, res) => {
   const idProduct = req.body.idProduct;
-  controller.show(idProduct)
+  productController.show(idProduct)
     .then((success) => {
       success.name = req.body.name;
-      success.price = req.body.pice;
+      success.price = req.body.price;
       success.detail = req.body.detail;
       success.category = req.body.categoryId;
       success.img = req.body.img;
@@ -38,7 +38,8 @@ router.post('updateProduct', (req, res) => {
         console.log(`Update product ${idProduct} successfull!`);
       });
       res.redirect('/manageProduct');
-    });
+    })
+    .catch(err => res.send(err));
 })
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
@@ -67,6 +68,18 @@ router.get('/signup', (req, res) => {
       res.send('Error');
     })
   })
+});
+
+//test
+router.post('/createCategory',  (req, res) => {
+  const item = {
+    id: req.body.id,
+    name: req.body.name,
+  };
+  categoryController.createItem(item)
+    .then((success) => {
+      res.redirect('/addCategory');
+    }).catch(err => res.send(err));
 });
 
 module.exports = router;
