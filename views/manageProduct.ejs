@@ -187,5 +187,14 @@
 			<p>	<b>Email:</b><a style="color:#0099CC" href="mailto:alicohue@yahoo.com.vn">alicohue@yahoo.com.vn</a>-<b>Website:</b><a style="color:#0099CC" target="_blank" href="http://alicohue.com">http://alicohue.com</a></p>
 		</footer>
 	</div>
+	<script>
+		var maxHeight = 0;
+
+		$(".div-san-pham").each(function(){
+		if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+		});
+
+		$(".div-san-pham").height(maxHeight);
+	</script>
 </body>
 </html>

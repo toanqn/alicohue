@@ -1,9 +1,19 @@
 .delete {
-	background-color: red;
+	background-color: #d9534f;
+}
+.delete:hover{
+	background-color: #c9302c;
+}
+.delete a{
+	color: white;
+	text-decoration: none;
 }
 .edit {
 
 	background-color: gray;
+}
+.edit:hover{
+	background-color: #595a5a;
 }
 .delete, .edit {
 	width: 55px;

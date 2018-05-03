@@ -195,11 +195,15 @@ input {
     padding-left: 10px;
     margin-left: 1px;
 }
+#search input:focus{
+    outline: none;
+}
 .left-bar{
 	padding: 0;
     padding-right: 30px;
 }
 .search-button {
+    cursor: pointer;
     float: left;
     width: 40px;
     height: 33px;
@@ -284,22 +288,18 @@ input {
 }
 .san-pham {
     margin-top: 30px;
+    overflow: hidden;
 }
 .san-pham .div-san-pham {
     float: left;
     background: #FFF;
     width: 125px;
-    height: 168px;
     margin-right: 15px;
     margin-top: 16px;
-    margin-bottom: 16px;
     position: relative;
 }
 #cate > div {
     display: block;
-}
-.div-san-pham {
-    position: absolute;
 }
 .san-pham .img-san-pham {
     width: 125px;

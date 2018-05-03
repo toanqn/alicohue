@@ -1,8 +1,11 @@
+.div-san-pham {
+	padding-bottom:40px;
+}
 .item{
-	padding-bottom: 6px;
+	padding-bottom: 20px;
 	display: inline-block;
-	margin-bottom: 30px;
-	position:relative;
+	position:absolute;
+	top: 85%;
 }
 
 .item .delete{

@@ -431,6 +431,15 @@
 			return false;
 		}
 	</script>
+	<script>
+		var maxHeight = 0;
+
+		$(".div-san-pham").each(function(){
+		if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+		});
+
+		$(".div-san-pham").height(maxHeight);
+	</script>
 </body>
 
 </html>
