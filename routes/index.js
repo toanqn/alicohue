@@ -112,11 +112,15 @@ router.get('/category', (req, res) => {
   const { id } = req.query;
   Promise.all([productController.showByCate(id), categoryController.getCateById(id)]) 
     .then(([products, category]) => {
-      res.render('category', {
-        login: req.isAuthenticated(),
-        category,
-        products
-      });
+      if (category) {
+        res.render('category', {
+          login: req.isAuthenticated(),
+          category,
+          products
+        });
+      } else {
+        res.redirect('/');
+      }
     })
     .catch((err) => {
       res.send(err);
